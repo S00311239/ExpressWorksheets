@@ -5,7 +5,10 @@ POST {{endpoint}} HTTP/1.1
 content-type: application/json
 
 {
-    "test" : "post test"
+    "test" : "post test",
+    "make": "Test Make",
+    "model": "Test Model",
+    "year": 2023
 }
 
 ###
@@ -24,9 +27,12 @@ content-type: application/json
 
 ###
 
-PUT  {{endpoint}}/sillycarID HTTP/3.0
+PUT  {{endpoint}}/6ab16c7815b79c091f7edbf9 HTTP/3.0
 content-type: application/json
 
 {
-    "test" : "put test"
+    "test" : "put test",
+    "make": "Test Make",
+    "model": "Test Model",
+    "year": 2023
 }
