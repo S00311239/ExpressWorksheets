@@ -1,8 +1,13 @@
 import express, {Application, Request, Response} from "express" ;
+import carRoutes from './routes/cars';
 
 const PORT = process.env.PORT || 3000;
 
 const app: Application = express();
+
+app.use(express.json());
+
+app.use('/api/v1/cars', carRoutes);
 
 // Middleware to log requests
 app.use((req, _res, next) => {  
