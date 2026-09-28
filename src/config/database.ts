@@ -2,7 +2,7 @@ import {env} from '../config/env';
 
 import mongoose from 'mongoose';
 
-const uri = env.MONGODB_URI ;
+const uri = env.mongoURI ;
 
 export const connectDB = async (): Promise<void> => {
   try {

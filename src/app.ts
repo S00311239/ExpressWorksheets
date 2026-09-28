@@ -5,7 +5,7 @@ import { connectDB } from "./config/database";
 import { authenticateKey } from './middleware/auth.middleware';
 import { logRequest } from "./middleware/logger.middleware";
 
-const PORT = env.PORT || 3000;
+const PORT = env.port || 3000;
 
 const app: Application = express();
 
