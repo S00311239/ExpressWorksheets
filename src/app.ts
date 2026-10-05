@@ -4,6 +4,8 @@ import { env } from './config/env';
 import { connectDB } from "./config/database";
 import { authenticateKey } from './middleware/auth.middleware';
 import { logRequest } from "./middleware/logger.middleware";
+import swaggerUi from 'swagger-ui-express';
+import { swaggerSpec } from './config/swagger';
 
 const PORT = env.port || 3000;
 
@@ -27,6 +29,12 @@ app.get('/bananas', async (_req : Request, res: Response) => {
 });
 
 app.use('/api/v1/cars', authenticateKey, carRoutes);
+
+app.use(
+  '/api-docs',
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
+);
 
 
 // Listen request

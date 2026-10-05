@@ -19,6 +19,7 @@ x-api-key: blahblah
 ###
 GET  {{endpoint}}/{{newCar}} HTTP/3.0
 content-type: application/json
+x-api-key: blahblah
 
 ###
 GET  {{endpoint}} HTTP/3.0
@@ -37,6 +38,7 @@ content-type: application/json
 
 PUT  {{endpoint}}/6ab16c7815b79c091f7edbf9 HTTP/3.0
 content-type: application/json
+x-api-key: blahblah
 
 {
     "test" : "put test",
