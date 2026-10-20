@@ -13,15 +13,6 @@ describe('Test Car Validation', () => {
             validCar)).not.toThrow();
     });
 
-});
-
-describe('Test Car Validation', () => {
-    it('should pass for the following valid data', () => {
-
-        expect(() => createCarZSchema.parse(
-            validCar)).not.toThrow();
-    });
-
   it('should pass for the following valid data - no date', () => {
 
         expect(() => createCarZSchema.parse(
