@@ -5,6 +5,11 @@ import { connectDB } from './config/database';
 const port = env.port;
 
 const startServer = async () => {
+
+  // testing env
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('Validated env:', env.nodeEnv);
+
   await connectDB();
 
   app.listen(port, (error) => {
@@ -21,3 +26,4 @@ const startServer = async () => {
 };
 
 startServer();
+
