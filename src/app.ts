@@ -5,6 +5,7 @@ import { authenticateKey } from './middleware/auth.middleware';
 import { logRequest } from "./middleware/logger.middleware";
 import swaggerUi from 'swagger-ui-express';
 import { swaggerSpec } from './config/swagger';
+import { errorHandler } from "./middleware/error.middleware";
 
 console.log('Before Express:', process.env.NODE_ENV);
 
@@ -42,6 +43,8 @@ app.get('/bananas', async (_req : Request, res: Response) => {
 });
 
 app.use('/api/v1/cars', authenticateKey, carRoutes);
+
+app.use(errorHandler);
 
 app.use(
   '/api-docs',
