@@ -23,6 +23,12 @@ const options: swaggerJSDoc.Options = {
                 },
             },
         },
+        // tells swagger to use API for all methods
+        security: [
+            {
+                ApiKeyAuth: [], 
+            }
+        ]
     },
     apis: ['./src/controllers/*.ts', './src/models/*.ts']
 };
